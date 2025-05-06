@@ -1,0 +1,87 @@
+@font-face{
+    font-family: 'Valorant';
+    src: url(Font/Valorant\ Font.ttf) format('truetype');
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.agent-section{
+    padding-top: 15vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 25% 25% 25%;
+    grid-auto-rows: 60vh;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+    background-color: #2D0036;
+    padding-bottom: 5rem;
+    padding-top: 10rem;
+}
+
+.agent-section div{
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to bottom, #414141, #8f4e8b);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 5rem 0 5rem 0;
+    background-color: #2D0036;
+    color: #FFFFFF;
+    text-align: center;
+    box-shadow: 0 0 20px #BB00FF;
+    transition: transform 0.3s ease;
+}
+
+.agent-section div img,
+
+.agent-section h2{
+    position: absolute;
+}
+
+.agent-img{
+    height: 75%;
+    z-index: 1;
+    bottom: 0;
+    transition: .3s ease;
+}
+
+.agent-role{
+    width: 80%;
+    z-index: 0;
+}
+
+.agent-name{
+    color: white;
+    bottom: 2rem;
+    z-index: 2;
+    text-transform: uppercase;
+}
+
+.agent-img:hover{
+    height: 90%;
+    transform: scale(1.05);
+    box-shadow: 0 0 30px #BB00FF;
+    border-radius: 1rem;
+}
+
+
+@media screen and (max-width:1000px) {
+    .agent-section{
+        grid-template-columns: 40% 40%;
+        grid-auto-rows: 70vh;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .agent-section{
+        grid-template-columns: 80%;
+        grid-auto-rows: 70vh;
+        padding-bottom: 1.5rem;
+    }
+}

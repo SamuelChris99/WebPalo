@@ -1,0 +1,241 @@
+@font-face{
+    font-family: 'Valorant';
+    src: url(Font/Valorant\ Font.ttf) format('truetype');
+}
+
+/* Navbar Styling*/
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+body{
+    width: 100%;
+    position: relative;
+}
+
+.navbar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    height: 12vh;
+    background: #1E1E1E;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-cont{
+    width: 100%;
+    height: 100%;
+    padding: 0 2rem 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.logo-text{
+    width: 50%;
+    color: white;
+}
+
+.nav-menu{
+    z-index: 100;
+    width: 50%;
+    display: flex;
+    justify-content: end;
+    gap: 2rem;
+}
+
+.nav-menu a{
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Pananda Hover */
+
+.nav-link:before{
+    content: "";
+    position: absolute;
+    left: -7px;
+    height: 100%;
+    width: 2px;
+    background: white;
+    transform: scaley(0);
+    transition: transform 150ms ease-in-out;
+}
+
+.nav-link:hover:before{
+    transform: scaley(1);
+}
+
+.in-page::after{
+    content: "";
+    position: absolute;
+    left: -7px;
+    height: 100%;
+    width: 2px;
+    background: white;
+    cursor: default;
+}
+
+.footer-cont{
+    width: 100%;
+    padding: 2rem 1rem 1rem;
+    background-color: #000000;
+}
+
+.socialIcons{
+    display: flex;
+    justify-content: center;
+}
+
+.socialIcons a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+    color: black;
+}
+
+.socialIcons a img{
+    width: 30px;
+    height: 30px;
+}
+
+.socialIcons a:hover{
+    color: rgb(164, 20, 20);
+    transition: 0.5s;
+}
+
+.socialIcons a:hover i{
+    color: white;
+    transition: 0.5s;
+}
+
+.footer-text{
+    color: white;
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+
+/* Part Hamburger */
+
+.nav-ham{
+    display: none;
+}
+
+footer{
+    width: 100%;
+    display: flex;
+}
+
+@media screen and (max-width: 1000px){
+    .nav-ham{
+        width: 30px;
+        height: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; 
+    }
+
+    .nav-ham span{
+        width: 100%;
+        height: 3px;
+        background-color: white;
+    }
+
+    .nav-menu{
+        display: none;
+        width: 250px;
+        height: 350px;
+        position: absolute;
+        top: 12vh;
+        right: -250px;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.8);
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 1.5rem 0 1.5rem;
+    }
+
+    @keyframes move_in{
+        from{right: -250px;}
+        to{right: -1rem;}
+    }
+
+    @keyframes move_out{
+        from{right: -1rem;}
+        to{right: -250px;}
+    }
+
+    .nav-menu.inactive{
+        display: flex;
+        animation: move_out .3s both;
+    }
+
+    .nav-menu.active{
+        display: flex;
+        animation: move_in .3s both;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .socialIcons{
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .socialIcons a{
+        padding: 8px;
+        margin: 6px;
+        font-size: 1.5rem;
+    }
+
+    .socialIcons a i{
+        font-size: 1.8rem;
+    }
+
+    .footer-text{
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+
+    .socialIcons a i{
+        font-size: 2rem;
+        color: black;
+        opacity: 0.9;
+    }
+    
+    .socialIcons a:hover{ 
+        color: rgb(164, 20, 20);
+        transition: 0.5s;
+    }
+    
+    .socialIcons a:hover i{
+        color: white;
+        transition: 0.5s;
+    }
+}
+
+@media screen and (max-width:600px){
+    .nav-menu{
+        width: 150px;
+        height: 250px;
+    }
+
+    .nav-menu a{
+        font-size: 1rem;
+    }
+}

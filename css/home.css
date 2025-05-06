@@ -1,0 +1,357 @@
+@font-face{
+    font-family: 'Valorant';
+    src: url(Font/Valorant\ Font.ttf) format('truetype');
+}
+
+html{
+    width: 100%;
+    overflow-x: hidden;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+button{
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+section{
+    width: 100%;
+    height: 100vh;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Styling untuk container agent */
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+.banner-cont{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.banner-cont video{
+    position: absolute;
+    width: auto;
+    height: 100%;
+    z-index: 0;
+}
+
+.opacity-filter{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 1;
+}
+
+.banner-desc{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    color: white;
+}
+
+.banner-desc h1{
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.banner-desc p{
+    margin-top: .25rem;
+    text-align: center;
+    padding: 0 2rem;
+}
+
+.banner-desc a{
+    padding: .75rem 2rem;
+    margin-top: 1rem;
+    background-color: #DC363B;
+    border-radius: 1rem;
+    color: white;
+    text-transform: uppercase;
+}
+
+.filter{
+    position: absolute;
+    top: 0;
+    left: 1;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 0;
+}
+
+.vidioval{
+    z-index: 1;
+}
+
+.home-title{
+    text-shadow:
+    0 0 5px rgba(0, 240, 255, 0.8),
+    0 0 10px rgba(0, 240, 255, 0.6),
+    0 0 20px rgba(0, 240, 255, 0.4),
+    0 0 40px rgba(0, 240, 255, 0.2);
+}
+
+/*best agent styling*/
+.best-agent{
+    position: relative;
+    background: linear-gradient(to bottom , #000000 60%, #5A0D0D); 
+    padding: 3rem 3rem;
+    font-size: 2rem;
+    overflow: hidden;
+}
+
+.best-agent .bestagent-title{
+    font-family: 'Valorant';
+    background: linear-gradient(to right, #810F7C 5%, #EECFEC 20%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.best-agent .logoreyna{
+    height: 20rem;
+    position: absolute;
+    right: 0;
+    top: 10%;
+}
+
+.best-agent .poligon{
+    position: absolute;
+    width: 60vw;
+    max-width: 900px;
+    left: 20%;
+    top: 10%;
+    z-index: 0;
+}
+
+.best-agent .reynac{
+    position: absolute;
+    width: 25vw;
+    max-width: 400px;
+    left: 5%;
+    top: 30%;
+    z-index: 2;
+    margin-left: 29rem;
+}
+
+.reyna-words-container{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.reyna-word{
+    font-family: 'Valorant';
+    background: linear-gradient(to right, #810F7C 5%, #EECFEC 20%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 7vw;
+    margin-top: 1rem;
+}
+
+.about-us{
+    padding-top: 5vw;
+    background: linear-gradient(to bottom , #5A0D0D, #000000);
+    font-size: 2rem;
+    justify-content: center;
+    display: flex;
+}
+
+.about-us .about-title{
+    font-family: 'Valorant';
+    background: linear-gradient(to right, #000000 5%, #666666 20%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 5rem;
+}
+
+.about-desc{
+    font-family: 'Valorant';
+    font-size: 1.3rem;
+    text-align: justify;
+}
+
+.about-us .about-text{
+    color: white;
+    flex-direction: column;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    width: 50%;
+}
+
+#ham-menu{
+    display: none;
+}
+
+@media (max-width: 768px){
+    /* hamburger menu */
+    .navbar .nav-menu{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        top: 100%;
+        right: -130%;
+        background-color: black;
+        width: 50%;
+        height: 50vh;
+        transition: 0.4s;
+    }
+
+    .navbar .nav-menu .nav-item .nav-link{
+        display: block;
+        margin: 1.5rem;
+        padding: 0.5rem;
+        font-size: 1.5rem;
+    }
+
+    .navbar .nav-menu.active{
+        right: 0;
+    }
+
+    #ham-menu{
+        display: inline-block;
+    }
+    
+    /* opening */
+    .agents-container{
+        background-image: url(../Assets/agennbg.png);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+
+
+    /* Best agent */
+    .best-agent{
+        padding: 2rem 1rem;
+    }
+
+    .best-agent .logoreyna{
+        height: 15rem;
+        margin-right: -1.5rem;
+    }
+
+    .best-agent .poligon{
+        height: 30rem;
+    }
+
+    .best-agent .reynac{
+        width: 20vw;
+        max-width: 300px;
+        margin-left: 5.5rem;
+    }
+
+    .reyna-words-container{
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+    
+    .reyna-word{
+        font-family: 'Valorant';
+        background: linear-gradient(to right, #810F7C 5%, #EECFEC 20%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 10vw;
+        margin-top: 2rem;
+    }
+    
+    .best-agent .reynac{
+        width: 50vw;
+        left: 0;
+        top: 30%;
+    }
+
+    .best-agent .poligon{
+        width: 70vw;
+        left: 15%;
+        top: 15%;
+    }
+
+    /* about us */
+    .about-us{
+        padding: 2rem 1rem;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .horbird{
+        width: 30vw;
+    }
+
+    .about-us .about-title{
+        font-size: 1.7rem;
+    }
+
+    .about-us .about-desc{
+        font-size: 0.8rem;
+        text-align: justify;
+        width: 100%;
+   }
+
+   .banner-desc p{
+        padding: 0 2rem;
+   }
+}
+
+@media screen and (max-width: 1000px) {
+    .banner-cont video{
+        height: 100%;
+        width:  auto;
+    }
+}

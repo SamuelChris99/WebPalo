@@ -1,0 +1,243 @@
+@font-face{
+    font-family: 'Valorant';
+    src: url(Font/Valorant\ Font.ttf) format('truetype');
+}
+
+html{
+    width: 100%;
+    overflow-x: hidden;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+button{
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+section{
+    width: 100%;
+}
+
+/* Navbar Styling*/
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Styling untuk container news */
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+.banner-cont{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: black;
+}
+
+.banner-cont video{
+    position: absolute;
+    /* width: 100%; */
+    width: auto;
+    height: 100%;
+    z-index: 0;
+}
+
+.opacity-filter{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 1;
+}
+
+.banner-desc{
+    width: 100%;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    z-index: 2;
+    color: white;
+}
+
+
+.banner-desc h1{
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+
+.banner-desc p{
+    margin-top: .25rem;
+    text-align: start;
+}
+
+.banner-desc a{
+    padding: .75rem 2rem;
+    margin-top: 1rem;
+    background-color: #DC363B;
+    border-radius: 1rem;
+    color: white;
+    text-transform: uppercase;
+} 
+
+.filter{
+    position: absolute;
+    top: 0;
+    left: 1;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 0;
+}
+
+.vidioval{
+    
+    z-index: 1;
+}
+
+/* NEWS */
+.news-section{
+    background-color: #262626;
+    padding: 40px;
+}
+
+.section-title{
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 5% 20px 5%;
+    color: white;
+}
+
+.news-container{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 45% 45%;
+    grid-auto-rows: 300px;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.news-card{
+    background-color: #444;
+    color: white;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.news-img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: gray; /* fallback */
+}
+
+.news-title{
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 0 5px 0;
+}
+
+.news-desc{
+    font-size: 11px;
+    margin: 0;
+}
+
+#ham-menu{
+    display: none;
+}
+
+@media (max-width: 768px){
+    /* hamburger menu */
+    .navbar .nav-menu{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        top: 100%;
+        right: -130%;
+        background-color: black;
+        width: 50%;
+        height: 50vh;
+        transition: 0.4s;
+    }
+
+    .navbar .nav-menu .nav-item .nav-link{
+        display: block;
+        margin: 1.5rem;
+        padding: 0.5rem;
+        font-size: 1.5rem;
+    }
+
+    .navbar .nav-menu.active{
+        right: 0;
+    }
+
+    .home-title h1{
+        font-size: 30px;
+    }
+
+    #ham-menu{
+        display: inline-block;
+    }
+
+   .banner-desc p{
+    padding: 0 2rem;
+   }
+
+   .news-container{
+    grid-template-columns: 80%;
+   }
+
+   .section-title{
+    margin: 0 10% 20px 10%;
+   }
+}
+
+@media screen and (max-width: 1000px){
+    .banner-cont video{
+        height: 100%;
+        width:  auto;
+    }
+}
